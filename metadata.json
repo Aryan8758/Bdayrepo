@@ -1,0 +1,6 @@
+{
+  "name": "Birthday Surprise ✨ Shreya's Special Day",
+  "description": "An interactive, romantic pink-themed birthday celebration with custom cake selection, balloon pop messages, memory showcase, personal letter, interactive bow & arrow, and celebratory music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
