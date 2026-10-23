@@ -24,6 +24,7 @@ export const KoikoiCake: React.FC<KoikoiCakeProps> = ({
   const [candleLit, setCandleLit] = useState(true);
   const [isBlowing, setIsBlowing] = useState(false);
   const [hasBlown, setHasBlown] = useState(false);
+  const [isVoiceCheering, setIsVoiceCheering] = useState(false);
   const [isCut, setIsCut] = useState(false);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ export const KoikoiCake: React.FC<KoikoiCakeProps> = ({
     setCandleLit(true);
     setHasBlown(false);
     setIsCut(false);
+    setIsVoiceCheering(false);
 
     const t1 = setTimeout(() => {
       setDropStage(1);
@@ -74,17 +76,23 @@ export const KoikoiCake: React.FC<KoikoiCakeProps> = ({
       setCandleLit(false);
       setIsBlowing(false);
       setHasBlown(true);
+      setIsVoiceCheering(true);
 
       confetti({
-        particleCount: 120,
+        particleCount: 140,
         spread: 90,
         origin: { y: 0.55 },
         colors: ['#F43F5E', '#EC4899', '#F472B6', '#FDE047', '#C084FC', '#FDA4AF'],
       });
 
+      // Voice shouts "Happy Birthday, Shreya!" then starts sweet melody
+      soundEngine.playVoiceCheer(recipientName, age, () => {
+        soundEngine.startHappyBirthdayMusic();
+      });
+
       setTimeout(() => {
-        soundEngine.playCelebratoryCheer();
-      }, 300);
+        setIsVoiceCheering(false);
+      }, 4000);
     }, 850);
   };
 
@@ -155,6 +163,19 @@ export const KoikoiCake: React.FC<KoikoiCakeProps> = ({
             <div className="flex items-center gap-2 text-yellow-300 text-3xl font-handwriting font-bold drop-shadow-[0_0_12px_rgba(253,224,71,0.8)] animate-bounce mt-4">
               <span className="text-3xl">🌬️</span>
               <span>Fooooh! 💨</span>
+            </div>
+          </div>
+        )}
+
+        {/* Voice Shout Celebration Banner: "HAPPY BIRTHDAY SHREYA!" */}
+        {isVoiceCheering && (
+          <div className="absolute top-4 left-3 right-3 z-50 pointer-events-none animate-bounce">
+            <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 text-white font-extrabold text-sm sm:text-base py-3 px-4 rounded-2xl shadow-2xl border-2 border-yellow-200/90 flex items-center justify-center gap-2">
+              <span className="text-2xl animate-pulse">🗣️</span>
+              <span className="tracking-wide drop-shadow-md">
+                &ldquo;HAPPY BIRTHDAY, {recipientName.toUpperCase()}!! 🎉✨&rdquo;
+              </span>
+              <span className="text-2xl">🎂</span>
             </div>
           </div>
         )}

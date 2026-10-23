@@ -36,8 +36,7 @@ export const AudioPlayerBar: React.FC<AudioPlayerBarProps> = ({ recipientName })
   };
 
   const handlePlayCheer = () => {
-    soundEngine.playCelebratoryCheer();
-    soundEngine.playSparkle();
+    soundEngine.playVoiceCheer(recipientName, 22);
   };
 
   return (

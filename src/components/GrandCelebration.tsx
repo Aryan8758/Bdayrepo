@@ -31,7 +31,7 @@ export const GrandCelebration: React.FC<GrandCelebrationProps> = ({
   }, []);
 
   const fireMoreConfetti = () => {
-    soundEngine.playCelebratoryCheer();
+    soundEngine.playVoiceCheer(recipientName, age);
     confetti({
       particleCount: 100,
       spread: 100,
