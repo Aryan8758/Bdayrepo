@@ -18,6 +18,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
 }) => {
   const stepLabels = [
     'Arrow 🏹',
+    'Day 🌸',
     'Cake 🎂',
     'Balloons 🎈',
     'Memories 📸',

@@ -33,21 +33,21 @@ export const FourBalloonsPop: React.FC<FourBalloonsPopProps> = ({
     {
       id: 2,
       label: 'Balloon #2',
-      color: 'from-rose-400 to-pink-500',
+      color: 'from-sky-400 to-blue-500',
       note: 'Tumhari ek smile dekh kar mera poora din ban jata hai. Duniya me sabse peaceful aur best feeling tumhare sath rehna hai 🌸',
       popped: false,
     },
     {
       id: 3,
       label: 'Balloon #3',
-      color: 'from-fuchsia-400 to-rose-500',
+      color: 'from-emerald-400 to-teal-500',
       note: 'Chahe hum kitne bi door kyu na ho, mera dil aur meri har ek heartbeat hamesha sirf tumhare paas hi rahti hai meri jaan 💌',
       popped: false,
     },
     {
       id: 4,
       label: 'Balloon #4',
-      color: 'from-rose-500 to-red-500',
+      color: 'from-amber-400 to-orange-500',
       note: 'Happy 22nd Birthday my dearest babe! Tum meri best friend bhi ho aur meri poori duniya bhi. I love you to the moon and back! 💖',
       popped: false,
     },
@@ -84,17 +84,14 @@ export const FourBalloonsPop: React.FC<FourBalloonsPopProps> = ({
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-6">
-      {/* Header */}
+      {/* Header matching Koikoi video frame 00:06 */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-semibold mb-2.5 border border-rose-200">
-          <Sparkles className="w-3.5 h-3.5 text-rose-500" />
-          <span>4 Dil Se Nikli Baatein</span>
-        </div>
-        <h2 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-rose-950 tracking-tight">
-          Pop the 4 Balloons, {recipientName}!
+        <h2 className="font-serif-luxury text-3xl sm:text-5xl font-extrabold text-rose-950 tracking-tight flex items-center justify-center gap-2">
+          <span>Pop the balloons</span>
+          <span className="text-3xl sm:text-4xl">🎈</span>
         </h2>
-        <p className="text-xs sm:text-sm text-rose-800/80 mt-1 max-w-md mx-auto">
-          Har ek balloon par tap karo aur dekho Aryan ne aapke liye kya likha hai ✨
+        <p className="text-xs sm:text-sm text-rose-800/80 mt-2 max-w-md mx-auto">
+          4 reasons are waiting inside. One pop at a time. ✨
         </p>
 
         {/* Counter and Reset */}

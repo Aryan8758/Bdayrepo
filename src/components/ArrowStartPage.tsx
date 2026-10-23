@@ -116,13 +116,18 @@ export const ArrowStartPage: React.FC<ArrowStartPageProps> = ({
         <span>Cupid&apos;s Special Mission for {recipientName}</span>
       </div>
 
-      <h1 className="font-serif-luxury text-3xl sm:text-5xl font-extrabold text-rose-950 tracking-tight leading-tight mb-2">
-        Pop My Heart To Enter ✨
-      </h1>
-
-      <p className="text-sm sm:text-base text-rose-800/80 max-w-md mx-auto mb-6">
-        Arrow ko piche kheencho aur seedha mere dil par nishana lagao!
-      </p>
+      {/* Header matching Video Frame 00:00: cursive "make a wish..." and "Happy Birthday" */}
+      <div className="mb-4">
+        <p className="font-handwriting text-2xl sm:text-3xl text-rose-300 font-semibold mb-1">
+          make a wish...
+        </p>
+        <h1 className="font-serif-luxury text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-none drop-shadow-md">
+          Happy Birthday
+        </h1>
+        <p className="text-xs sm:text-sm text-rose-200/90 mt-2">
+          Pop my heart with Cupid&apos;s arrow to enter your 22nd birthday surprise! 🏹❤️
+        </p>
+      </div>
 
       {/* Interactive Arena */}
       <div className="bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-8 border border-rose-200 shadow-2xl shadow-rose-200/50 relative overflow-hidden">
