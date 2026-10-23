@@ -103,21 +103,39 @@ export const GrandCelebration: React.FC<GrandCelebrationProps> = ({
             </div>
           </div>
 
-          {/* Flower Bouquet */}
-          <div className="relative rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-rose-300 via-pink-200 to-amber-200 shadow-xl shadow-rose-200/60 transform hover:scale-102 transition-transform">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-rose-100">
+          {/* Cute Dudu Giving Flowers Card (Emoji Gift requested by user) */}
+          <div
+            onClick={() => {
+              soundEngine.playSparkle();
+              confetti({
+                particleCount: 40,
+                spread: 60,
+                origin: { x: 0.65, y: 0.6 },
+                colors: ['#F472B6', '#FDA4AF', '#FB7185', '#FEF08A'],
+              });
+            }}
+            className="cursor-pointer relative rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-pink-300 via-rose-200 to-amber-200 shadow-xl shadow-rose-200/60 transform hover:scale-105 active:scale-95 transition-all"
+          >
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-white flex flex-col items-center justify-between p-2">
+              {/* Cute Floating Hearts Header */}
+              <div className="absolute top-2 left-2 bg-rose-100 text-rose-700 text-[10px] font-bold px-2 py-0.5 rounded-full z-10 flex items-center gap-1 shadow-xs">
+                <span>Dudu & Flowers 🌸</span>
+              </div>
+
+              {/* Dudu Giving Flowers Image */}
               <img
-                src="/src/assets/images/romantic_flower_bouquet_1792678862607.jpg"
-                alt={`Romantic birthday bouquet for ${recipientName}`}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover animate-float-slow"
+                src="/assets/images/dudu_flowers.png"
+                alt="Dudu giving flowers to Shreya"
+                className="w-full h-full object-contain animate-float-slow py-1"
               />
-              <div className="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-md rounded-xl p-2 text-center border border-rose-200/70 shadow-xs">
-                <p className="font-serif-luxury text-xs font-bold text-rose-950">
-                  Birthday Blooms 🌸
+
+              {/* Sweet Caption */}
+              <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-md rounded-xl p-2 text-center border border-rose-200/70 shadow-sm z-10">
+                <p className="font-handwriting text-base font-bold text-rose-950 leading-tight">
+                  For My Shreya 🐻🌸
                 </p>
-                <p className="text-[10px] text-rose-700">
-                  For My Prettiest Girl
+                <p className="text-[10px] text-rose-700 font-medium">
+                  &ldquo;Ye lo dher saare phool aur dher saara pyaar!&rdquo; 🌹
                 </p>
               </div>
             </div>
